@@ -9,15 +9,17 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "model")
     private String model;
 
+    @Column(name = "series")
     private int series;
 
     public Long getId() {
         return id;
     }
 
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public User getUser() {

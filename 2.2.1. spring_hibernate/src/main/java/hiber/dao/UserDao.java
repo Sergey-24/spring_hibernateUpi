@@ -10,6 +10,6 @@ public interface UserDao {
 
    List<User> listUsers();
 
-   void getUser(Car car);
+   List<User>getUserByCar(Car car);
 
 }
