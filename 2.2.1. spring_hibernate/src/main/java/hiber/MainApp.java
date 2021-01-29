@@ -50,13 +50,10 @@ public class MainApp {
          System.out.println();
       }
 
-      List<User> userList = userService.getUserByCar(car2);
+      List<User> userList = userService.getUserByCar(new Car("Opel", 5));
       for (User user : userList) {
-         System.out.println("Id = " + user.getId());
-         System.out.println("First Name = " + user.getFirstName());
-         System.out.println("Last Name = " + user.getLastName());
-         System.out.println("Email = " + user.getEmail());
-         System.out.println();
+
+         System.out.println(user);
       }
    }
 }
